@@ -51,7 +51,7 @@ If you think something is bad about CYMS or its Wiki, feel free to send a PR, th
 
 # Installation
 
-Simply look up CYMS in the Library Manager in Arduino IDE
+Simply, download the latest release, then import as zip library in Arduino IDE, no PIO support YET
 
 
 # License
