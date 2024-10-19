@@ -23,8 +23,31 @@ void Bar::draw(BB_SPI_LCD &lcd) {
   
   // Set the cursor in the middle of the bar
   lcd.setCursor(_x + (_width / 2), _y + (_height / 2));
+  
+  // Determine if the inside color is dark or light
+  uint8_t r = (_insideColor >> 11) & 0x1F;  // Extract red component (5 bits)
+  uint8_t g = (_insideColor >> 5) & 0x3F;   // Extract green component (6 bits)
+  uint8_t b = _insideColor & 0x1F;          // Extract blue component (5 bits)
+  
+  // Scale RGB values to 8 bits
+  r = (r * 255) / 31;
+  g = (g * 255) / 63;
+  b = (b * 255) / 31;
+
+  // Calculate luminance using the formula: 
+  // Luminance = 0.299 * R + 0.587 * G + 0.114 * B
+  int luminance = (int)(0.299 * r + 0.587 * g + 0.114 * b);
+
+  // Set text color based on luminance
+  if (luminance > 128) {
+    lcd.setTextColor(TFT_BLACK, _insideColor);  // Light background, use black text
+  } else {
+    lcd.setTextColor(TFT_WHITE, _insideColor);  // Dark background, use white text
+  }
+
   lcd.print(_value);
 }
+
 
 void Bar::setValue(int value) {
   // Constrain value within min and max
