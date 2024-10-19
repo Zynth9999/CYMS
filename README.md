@@ -14,6 +14,7 @@ This library has all the features of **bb_spi_lcd** like:
 - displaying **Windows format BMP files**
 - **built-in touch** support for the CYD
 - **backbuffer (RAM) operations** for smooth UI renering
+
 CYMS provides a good looking and snappy interface for various functions for the CYD.
 
 Check out the Wiki for more documentation
