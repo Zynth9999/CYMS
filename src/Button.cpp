@@ -8,11 +8,13 @@ Button::Button(int x, int y, int w, int h, uint16_t color, uint16_t bgColor, uin
   _label = label;
   _callback = NULL;
   _radius = 0;
+  _color = color;
+  _bgColor = bgColor;
 }
 
-void Button::draw(BB_SPI_LCD &lcd, uint16_t color, uint16_t bgColor, int cornerRadius) {
-  lcd.fillRoundRect(_x, _y, _w, _h, cornerRadius, bgColor);  // Draw button background
-  lcd.setTextColor(color, bgColor);
+void Button::draw(BB_SPI_LCD &lcd) {
+  lcd.fillRoundRect(_x, _y, _w, _h, _radius, bgColor);  // Draw button background
+  lcd.setTextColor(_color, _bgColor);
   lcd.setCursor(_x + 10, _y + 10);  // Adjust position as needed
   lcd.print(_label);  // Print label
 }

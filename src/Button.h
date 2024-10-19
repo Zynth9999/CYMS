@@ -16,6 +16,7 @@ class Button {
   private:
     void (*_callback)();
     int _x, _y, _w, _h;
+    uint16_t _color, _bgColor, _radius;
     const char* _label;
 };
 
