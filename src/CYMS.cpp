@@ -6,18 +6,18 @@ CYMS::CYMS(BB_SPI_LCD *lcd) {
   _labelCount = 0;
   _sliderCount = 0;
   _counterCount = 0;
-  _graphCount = 0;
+  _barCount = 0;
   _iconCount = 0;
 }
 
 void CYMS::addButton(Button* button) {
-  if (_buttonCount < 10) {
+  if (_buttonCount < 25) {
     _buttons[_buttonCount++] = button;
   }
 }
 
 void CYMS::addLabel(Label* label) {
-  if (_labelCount < 10) {
+  if (_labelCount < 25) {
     _labels[_labelCount++] = label;
   }
 }
@@ -29,14 +29,14 @@ void CYMS::addSlider(Slider* slider) {
 }
 
 void CYMS::addCounter(Counter* counter) {
-  if (_counterCount < 10) {
+  if (_counterCount < 4) {
     _counters[_counterCount++] = counter;
   }
 }
 
-void CYMS::addGraph(Graph* graph) {
-  if (_graphCount < 10) {
-    _graphs[_graphCount++] = graph;
+void CYMS::addBar(Bar* bar) {
+  if (_barCount < 10) {
+    _bars[_barCount++] = bar;
   }
 }
 
@@ -67,11 +67,10 @@ void CYMS::render() {
     _counters[i]->draw(*_lcd);
   }
 
-  // Render graphs
-  for (int i = 0; i < _graphCount; i++) {
-    _graphs[i]->draw(*_lcd);
+  // Render bars
+  for (int i = 0; i < _barCount; i++) {
+    _bars[i]->draw(*_lcd);
   }
-
   // Render icons
   for (int i = 0; i < _iconCount; i++) {
     _icons[i]->draw(*_lcd);
