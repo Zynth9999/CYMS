@@ -17,10 +17,12 @@ void Bar::draw(BB_SPI_LCD &lcd) {
 }
 
 void Bar::setValue(int value) {
-  if(!value >= _width+2 || !value <= 0) {
-    _value = value;
+  if(value > _width) {
+    _value = _width;
+  } else if(value < 0) {
+    _value = 0;
   } else {
-    _value = _width+2;
+    _value = value;
   }
 }
 
