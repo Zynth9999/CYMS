@@ -4,9 +4,9 @@
 BB_SPI_LCD lcd;
 CYMS menu(&lcd);
 
-Button btn1(50, 50, 100, 40, "Start");
-Button btn2(50, 100, 100, 40, "Settings");
-Label lbl1(50, 150, "Select an option:");
+Button btn1(50, 50, 100, 40,TFT_RED,TFT_BLUE, "Btn 1");
+Button btn2(50, 100, 100, 40, TFT_WHITE, TFT_BLUE, "Btn 2");
+Label lbl1(50, 150, TFT_WHITE, TFT_BLACK, "Select an option:");
 
 void setup() {
   Serial.begin(115200);
