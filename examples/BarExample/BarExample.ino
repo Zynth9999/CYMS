@@ -3,10 +3,10 @@
 
 BB_SPI_LCD lcd;
 CYMS menu(&lcd);
-
-Button btn1(50, 50, 100, 40, "+");
-Button btn2(152, 50, 100, 40, "-");
-Bar bar(50, 75, 200, 100, TFT_WHITE, TFT_BLUE);
+// X, Y, W, H, TEXT COLOR, BTN COLOR, RADIUS, TEXT
+Button btn1(152, 50, 100, 40, TFT_GREY, TFT_GREEN,15, "+");
+Button btn2(50, 50, 100, 40, TFT_GREY, TFT_RED,15, "-");
+Bar bar(50,100, 200, 25, 0, 10, TFT_GREY, TFT_BLUE);
 
 void setup() {
   Serial.begin(115200);
@@ -16,11 +16,13 @@ void setup() {
 
   menu.addButton(&btn1);
   btn1.setCallback([]() {
+    delay(50);
     bar.setValue(bar.getValue() + 1);
     menu.render();
   });
   menu.addButton(&btn2);
   btn2.setCallback([]() {
+    delay(50);
     bar.setValue(bar.getValue() - 1);
     menu.render();
   });
