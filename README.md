@@ -5,7 +5,7 @@
 
 <h1 align="center">Made with the CYD and Ease in mind</h1>
 
-![GitHub Repo stars](https://img.shields.io/github/stars/zynth9999/CYMS?style=for-the-badge) ![GitHub forks](https://img.shields.io/github/forks/zynth9999/CYMS?style=for-the-badge) ![GitHub followers](https://img.shields.io/github/followers/zynth9999?style=for-the-badge) ![Static Badge](https://img.shields.io/badge/release-v0.01.0-brightgreen?style=for-the-badge) ![GitHub last commit](https://img.shields.io/github/last-commit/zynth9999/CYMS?display_timestamp=author&style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/zynth9999/CYMS?style=for-the-badge)
+![GitHub Repo stars](https://img.shields.io/github/stars/Zynth9999/CYMS?style=for-the-badge) ![GitHub forks](https://img.shields.io/github/forks/Zynth9999/CYMS?style=for-the-badge) ![GitHub followers](https://img.shields.io/github/followers/zynth9999?style=for-the-badge) ![Static Badge](https://img.shields.io/badge/release-v0.01.0-brightgreen?style=for-the-badge) ![GitHub last commit](https://img.shields.io/github/last-commit/Zynth9999/CYMS?display_timestamp=author&style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/Zynth9999/CYMS?style=for-the-badge)
 
 
 **CYMS** is designed for effortless creation of menus on the **Cheap Yellow Display (CYD)**, offering a rich set of functions and an easy-to-use API.
