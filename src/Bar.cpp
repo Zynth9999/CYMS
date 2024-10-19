@@ -13,14 +13,14 @@ Bar::Bar(int x, int y, int width, int height, int borderColor, int insideColor) 
 
 void Bar::draw(BB_SPI_LCD &lcd) {
   lcd.drawRect(_x, _y, _width, _height, _borderColor);  // Bar border
-  lcd.fillRect(_x-1, _y-1, _value-2, _height-2, _insideColor);  // Bar background
+  lcd.fillRect(_x+1, _y+1, _value-2, _height-2, _insideColor);  // Bar background
 }
 
 void Bar::setValue(int value) {
-  if(!value >= _width-2 || !value <= 0) {
+  if(!value >= _width+2 || !value <= 0) {
     _value = value;
   } else {
-    _value = _width-2;
+    _value = _width+2;
   }
 }
 
