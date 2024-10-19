@@ -16,6 +16,7 @@ class Bar {
     int _x, _y, _width, _height;
     int _value;
     int _borderColor, _insideColor;
+    int _minValue, _maxValue;
 };
 
 #endif

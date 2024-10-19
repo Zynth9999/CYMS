@@ -49,12 +49,12 @@ void CYMS::addIcon(Icon* icon) {
 void CYMS::render() {
   // Render buttons
   for (int i = 0; i < _buttonCount; i++) {
-    _buttons[i]->draw(*_lcd, TFT_WHITE, TFT_BLUE);
+    _buttons[i]->draw(*_lcd);
   }
 
   // Render labels
   for (int i = 0; i < _labelCount; i++) {
-    _labels[i]->draw(*_lcd, TFT_GREEN, TFT_BLACK);
+    _labels[i]->draw(*_lcd);
   }
 
   // Render sliders

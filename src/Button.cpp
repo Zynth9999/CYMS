@@ -1,16 +1,17 @@
 #include "Button.h"
 
-Button::Button(int x, int y, int w, int h, const char* label) {
+Button::Button(int x, int y, int w, int h, uint16_t color, uint16_t bgColor, uint16_t radius, const char* label) {
   _x = x;
   _y = y;
   _w = w;
   _h = h;
   _label = label;
   _callback = NULL;
+  _radius = 0;
 }
 
-void Button::draw(BB_SPI_LCD &lcd, uint16_t color, uint16_t bgColor) {
-  lcd.fillRect(_x, _y, _w, _h, bgColor);  // Draw button background
+void Button::draw(BB_SPI_LCD &lcd, uint16_t color, uint16_t bgColor, int cornerRadius) {
+  lcd.fillRoundRect(_x, _y, _w, _h, cornerRadius, bgColor);  // Draw button background
   lcd.setTextColor(color, bgColor);
   lcd.setCursor(_x + 10, _y + 10);  // Adjust position as needed
   lcd.print(_label);  // Print label

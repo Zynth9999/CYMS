@@ -10,8 +10,7 @@ Counter::Counter(int x, int y, int initialValue) {
 void Counter::draw(BB_SPI_LCD &lcd) {
   lcd.setCursor(_x, _y);
   lcd.setTextColor(TFT_WHITE, TFT_BLACK);
-  lcd.print("Count: ");
-  lcd.println(_value);
+  lcd.print(_value);
 }
 
 void Counter::increment() {
