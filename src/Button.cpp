@@ -13,7 +13,7 @@ Button::Button(int x, int y, int w, int h, uint16_t color, uint16_t bgColor, uin
 }
 
 void Button::draw(BB_SPI_LCD &lcd) {
-  lcd.fillRoundRect(_x, _y, _w, _h, _radius, bgColor);  // Draw button background
+  lcd.fillRoundRect(_x, _y, _w, _h, _radius, _bgColor);  // Draw button background
   lcd.setTextColor(_color, _bgColor);
   lcd.setCursor(_x + 10, _y + 10);  // Adjust position as needed
   lcd.print(_label);  // Print label

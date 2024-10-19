@@ -4,7 +4,6 @@ Label::Label(int x, int y, int color, int bgColor, const char* text) {
   _x = x;
   _y = y;
   _text = text;
-
   _color = color;
   _bgColor = bgColor;
 }
