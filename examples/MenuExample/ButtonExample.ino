@@ -15,7 +15,17 @@ void setup() {
   lcd.fillScreen(TFT_BLACK);
 
   menu.addButton(&btn1);
+  btn1.setCallback([]() {
+    Label Button2Label(5, 5, "Pressed Button 2");
+    menu.addLabel(&Button2Label);
+    menu.render();
+  })
   menu.addButton(&btn2);
+  btn2.setCallback([]() {
+    Label Button1Label(5, 5, "Pressed Button 1");
+    menu.addLabel(&Button1Label);
+    menu.render();
+  })
   menu.addLabel(&lbl1);
   menu.render();  // Render the menu
 }

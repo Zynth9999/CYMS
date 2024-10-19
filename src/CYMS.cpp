@@ -82,7 +82,7 @@ void CYMS::handleTouch(int tx, int ty) {
   for (int i = 0; i < _buttonCount; i++) {
     if (_buttons[i]->contains(tx, ty)) {
       // Example touch event for buttons
-      _lcd->fillRect(0, 32, 320, 208, TFT_BLACK);
+      _buttons[i]->onTouch();
     }
   }
 

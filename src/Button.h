@@ -11,7 +11,10 @@ class Button {
     bool contains(int tx, int ty);  // Check if touch coordinates are inside the button
     void setLabel(const char* label);  // Set the button label
     const char* getLabel();  // Get the button label
+    void onTouch();  // Call the button callback
+    void setCallback(void (*callback)());  // Set the button callback
   private:
+    void (*_callback)();
     int _x, _y, _w, _h;
     const char* _label;
 };

@@ -6,6 +6,7 @@ Button::Button(int x, int y, int w, int h, const char* label) {
   _w = w;
   _h = h;
   _label = label;
+  _callback = NULL;
 }
 
 void Button::draw(BB_SPI_LCD &lcd, uint16_t color, uint16_t bgColor) {
@@ -21,6 +22,16 @@ bool Button::contains(int tx, int ty) {
 
 void Button::setLabel(const char* label) {
   _label = label;
+}
+
+void Button::setCallback(void (*callback)()) {
+  _callback = callback;
+}
+
+void Button::onTouch() {
+  if (_callback != NULL) {
+    _callback();
+  }
 }
 
 const char* Button::getLabel() {
