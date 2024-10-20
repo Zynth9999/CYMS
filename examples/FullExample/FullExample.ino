@@ -8,8 +8,8 @@ CYMS menu(&lcd);
 Button btn1(102, 0, 100, 40, TFT_GREY, TFT_GREEN,15, "+");
 Button btn2(0, 0, 100, 40, TFT_GREY, TFT_RED,15, "-");
 Bar bar(0,42, 202, 25, 0, 10, TFT_GREY, TFT_BLUE);
-Label lbl1(0, 84, TFT_WHITE, TFT_BLACK, "Value");
-Slider slider(0, 42, 200, 25, 0, 10, TFT_WHITE, TFT_BLUE);
+Label lbl1(202, 69, TFT_WHITE, TFT_BLACK, "Value");
+Slider slider(0, 69, 200, 25, 0, 10, TFT_WHITE, TFT_BLUE);
 
 
 void setup() {
@@ -40,6 +40,5 @@ void loop() {
   if (lcd.rtReadTouch(&ti)) {
     lbl1.setText(String(bar.getValue()));
     menu.handleTouch(ti.x[0], ti.y[0]);  // Handle touch events
-    
   }
 }
