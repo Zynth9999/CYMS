@@ -24,7 +24,7 @@ const uint8_t iconData[16][16] = {
     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
 };
 
-
+Style exampleStyle(2, TFT_WHITE, TFT_BLACK, 2, TFT_GREEN, TFT_RED, 3, TFT_BLACK, TFT_BLUE, 15, TFT_BLUE, TFT_WHITE, 2);
 Button btn1(102, 0, 100, 40, TFT_GREY, TFT_GREEN,15, "+");
 Button btn2(0, 0, 100, 40, TFT_GREY, TFT_RED,15, "-");
 Bar bar(0,42, 202, 25, 0, 10, TFT_GREY, TFT_BLUE);

@@ -1,12 +1,13 @@
 #include "Label.h"
-
-Label::Label(int x, int y, int fontSize, int color, int bgColor, const char* text) {
+#include "Style.h"
+Label::Label(int x, int y, Style style, const char* text) {
   _x = x;
   _y = y;
   _text = text;
-  _color = color;
-  _bgColor = bgColor;
-  _fontSize = fontSize;
+  _style = style;
+  _fontSize = style._fontSize;
+  _color = style._labelColor;
+  _bgColor = style._bgColor;
 }
 
 void Label::draw(BB_SPI_LCD &lcd) {

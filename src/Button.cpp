@@ -1,15 +1,18 @@
 #include "Button.h"
-
-Button::Button(int x, int y, int w, int h, uint16_t color, uint16_t bgColor, uint16_t radius, const char* label) {
+#include "Style.h"
+Button::Button(int x, int y, int w, int h, Style style, const char* label) {
   _x = x;
   _y = y;
   _w = w;
   _h = h;
   _label = label;
   _callback = NULL;
-  _radius = 0;
-  _color = color;
-  _bgColor = bgColor;
+
+  _color = style._buttonColor;
+  _bgColor = style._buttonBgColor;
+  _radius = style._buttonRadius;
+
+  _fontSize = style._buttonFontSize;
 }
 
 void Button::draw(BB_SPI_LCD &lcd) {

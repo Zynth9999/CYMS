@@ -1,6 +1,6 @@
 #include "Slider.h"
-
-Slider::Slider(int x, int y, int width, int height, int minVal, int maxVal, int color, int bgColor) {
+#include "Style.h"
+Slider::Slider(int x, int y, int width, int height, int minVal, int maxVal, Style style) {
   _x = x;
   _y = y;
   _width = width;
@@ -8,8 +8,12 @@ Slider::Slider(int x, int y, int width, int height, int minVal, int maxVal, int 
   _minVal = minVal;
   _maxVal = maxVal;
   _value = minVal;
-  _color = color;
-  _bgColor = bgColor;
+  _style = style;
+  
+  _color = style._sliderColor;
+  _bgColor = style._sliderBgColor;
+  _thumbShape = style._sliderThumbShape;
+
 }
 
 void Slider::draw(BB_SPI_LCD &lcd) {
@@ -23,7 +27,15 @@ void Slider::draw(BB_SPI_LCD &lcd) {
   lcd.fillRect(_x + 1, _y, _width - 2, _height, _bgColor);
 
   // Draw slider thumb (5 pixels wide)
-  lcd.fillRect(sliderPos, _y, 5, _height, _color);
+  if(_thumbShape == 0) {
+    lcd.fillRoundRect(sliderPos, _y + 2, 5, _height - 4, 2, _color);
+  } else if (_thumbShape == 1) {
+    lcd.fillRect(sliderPos, _y, _height, _height, _color);
+  } else {
+    lcd.fillCircle(sliderPos, _y + _height / 2, _height / 2, _color);
+  }
+  }
+  
 
 }
 

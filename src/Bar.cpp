@@ -1,13 +1,15 @@
 #include "Bar.h"
+#include <bb_spi_lcd.h>
+#include "Style.h"
 
-Bar::Bar(int x, int y, int width, int height, int minValue, int maxValue, int borderColor, int insideColor) {
+Bar::Bar(int x, int y, int width, int height, Style style, int minValue, int maxValue) {
   _x = x;
   _y = y;
   _width = width;
   _height = height;
   _value = minValue;  // Initialize to minValue
-  _borderColor = borderColor;
-  _insideColor = insideColor;
+  _borderColor = style._barColor;
+  _insideColor = style._barBgColor;
   _minValue = minValue;
   _maxValue = maxValue;
 }

@@ -9,6 +9,7 @@
 #include "Bar.h"
 #include "Icon.h"
 #include <bb_spi_lcd.h>
+#include "Style.h"
 
 class CYMS {
   public:
