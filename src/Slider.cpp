@@ -29,7 +29,7 @@ void Slider::draw(BB_SPI_LCD &lcd) {
 
   // Draw slider thumb (5 pixels wide)
   if(1==1) {
-    lcd.fillRect(sliderPos, _y, _height/5, _height,, _color);
+    lcd.fillRect(sliderPos, _y, _height/5, _height, _color);
   }
   
   
