@@ -8,11 +8,6 @@ Button btn1(152, 50, 100, 40, TFT_GREY, TFT_GREEN,15, "Option 1");
 Button btn2(50, 50, 100, 40, TFT_GREY, TFT_RED,15, "Option 2");
 Label lbl1(50, 150, TFT_WHITE, TFT_BLACK, "Select an option:");
 
-
-Button btn1(50, 50, 100, 40,TFT_RED,TFT_BLUE, "Btn 1");
-Button btn2(50, 100, 100, 40, TFT_WHITE, TFT_BLUE, "Btn 2");
-Label lbl1(50, 150, TFT_WHITE, TFT_BLACK, "Select an option:");
-
 void setup() {
   Serial.begin(115200);
   lcd.begin(DISPLAY_CYD_2USB);
