@@ -14,19 +14,19 @@ void setup() {
   lcd.rtInit(32, 39, 25, 33);  // Example touch pins
   lcd.fillScreen(TFT_BLACK);
 
-  menu.addButton(&btn1);
+  menu.addWidget(&btn1);
   btn1.setCallback([]() {
     Label Button2Label(5, 5, TFT_WHITE, TFT_BLACK, "Pressed Button 2");
     menu.addLabel(&Button2Label);
     menu.render();
   });
-  menu.addButton(&btn2);
+  menu.addWidget(&btn2);
   btn2.setCallback([]() {
     Label Button1Label(5, 5, TFT_WHITE, TFT_BLACK, "Pressed Button 1");
     menu.addLabel(&Button1Label);
     menu.render();
   });
-  menu.addLabel(&lbl1);
+  menu.addWidget(&lbl1);
   menu.render();  // Render the menu
 }
 

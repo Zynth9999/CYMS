@@ -15,19 +15,19 @@ void setup() {
   lcd.rtInit(32, 39, 25, 33);  // Example touch pins
   lcd.fillScreen(TFT_BLACK);
 
-  menu.addButton(&btn1);
+  menu.addWidget(&btn1);
   btn1.setCallback([]() {
     delay(50);
     bar.setValue(bar.getValue() + 1);
     menu.render();
   });
-  menu.addButton(&btn2);
+  menu.addWidget(&btn2);
   btn2.setCallback([]() {
     delay(50);
     bar.setValue(bar.getValue() - 1);
     menu.render();
   });
-  menu.addBar(&bar);
+  menu.addWidget(&bar);
   menu.render();  // Render the menu
 }
 

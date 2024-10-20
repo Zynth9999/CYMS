@@ -1,7 +1,6 @@
-// Slider.cpp
 #include "Slider.h"
 
-Slider::Slider(int x, int y, int width, int height, int minVal, int maxVal) {
+Slider::Slider(int x, int y, int width, int height, int minVal, int maxVal, int color, int bgColor) {
   _x = x;
   _y = y;
   _width = width;
@@ -9,12 +8,19 @@ Slider::Slider(int x, int y, int width, int height, int minVal, int maxVal) {
   _minVal = minVal;
   _maxVal = maxVal;
   _value = minVal;
+  _color = color;
+  _bgColor = bgColor;
 }
 
 void Slider::draw(BB_SPI_LCD &lcd) {
-  lcd.drawRect(_x, _y, _width, _height, TFT_WHITE); // Slider background
-  int sliderPos = _x + ((_value - _minVal) * _width) / (_maxVal - _minVal);
-  lcd.fillRect(sliderPos, _y, 5, _height, TFT_BLUE); // Slider thumb
+  // Draw slider background
+  lcd.drawRect(_x, _y, _width, _height, _bgColor);
+
+  // Calculate thumb position based on current value
+  int sliderPos = _x + ((_value - _minVal) * (_width - 5)) / (_maxVal - _minVal); // Adjusted to avoid exceeding bounds
+
+  // Draw slider thumb (5 pixels wide)
+  lcd.fillRect(sliderPos, _y, 5, _height, _color);
 }
 
 void Slider::setValue(int value) {
@@ -29,4 +35,14 @@ int Slider::getValue() {
 
 bool Slider::contains(int tx, int ty) {
   return (tx >= _x && tx <= (_x + _width) && ty >= _y && ty <= (_y + _height));
+}
+
+bool Slider::handleTouch(int tx, int ty) {
+  if (contains(tx, ty)) {
+    // Calculate new value based on touch position relative to the slider width
+    int newValue = _minVal + ((tx - _x) * (_maxVal - _minVal)) / (_width - 5); // Adjust for thumb width
+    setValue(newValue); // Update slider value
+    return true;
+  }
+  return false;
 }

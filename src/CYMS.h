@@ -13,12 +13,7 @@
 class CYMS {
   public:
     CYMS(BB_SPI_LCD *lcd);
-    void addButton(Button* button);
-    void addLabel(Label* label);
-    void addSlider(Slider* slider);
-    void addCounter(Counter* counter);
-    void addBar(Bar* bar);
-    void addIcon(Icon* icon);
+    void addWidget(void *widget);
     void render();
     void handleTouch(int tx, int ty);
   
