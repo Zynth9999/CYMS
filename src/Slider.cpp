@@ -1,6 +1,7 @@
 #include "Slider.h"
+#include "Label.h"
 
-Slider::Slider(int x, int y, int width, int height, int minVal, int maxVal, Label label, int color, int bgColor) {
+Slider::Slider(int x, int y, int width, int height, int minVal, int maxVal, Label* label, int color, int bgColor) {
   _x = x;
   _y = y;
   _width = width;
@@ -10,7 +11,7 @@ Slider::Slider(int x, int y, int width, int height, int minVal, int maxVal, Labe
   _value = minVal;
   _color = color;
   _bgColor = bgColor;
-  _label = label;
+  _label = label;  // Assign the label pointer
 }
 
 void Slider::draw(BB_SPI_LCD &lcd) {
@@ -26,10 +27,9 @@ void Slider::draw(BB_SPI_LCD &lcd) {
   // Fill the inside with the bg color
   lcd.fillRect(_x + 1, _y, _width - 2, _height, _bgColor);
 
-  if (_label) {
-    _label->setText(String(_value).c_str());
+  if (_label) {  // Check if the label exists
+    _label->setText(String(_value).c_str());  // Update the label text with the slider value
   }
-
 }
 
 void Slider::setValue(int value) {
