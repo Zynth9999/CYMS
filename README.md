@@ -7,17 +7,10 @@
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/Zynth9999/CYMS?style=for-the-badge) ![GitHub forks](https://img.shields.io/github/forks/Zynth9999/CYMS?style=for-the-badge) ![GitHub followers](https://img.shields.io/github/followers/zynth9999?style=for-the-badge) ![Static Badge](https://img.shields.io/badge/release-v0.01.2-brightgreen?style=for-the-badge) ![GitHub last commit](https://img.shields.io/github/last-commit/Zynth9999/CYMS?display_timestamp=author&style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/Zynth9999/CYMS?style=for-the-badge)
 
-## Table of Contents
-- [Overview](#overview)
-- [Some information](#some-information)
-- [Contributing](#contributing)
-- [Features](#features)
-- [Installation](#Installation)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
-- [Contact](#contact)
 
-# Overview
+---
+
+# 👀 Overview
 
 **CYMS** is designed for effortless creation of menus on the **Cheap Yellow Display (CYD)**, offering a rich set of functions and an easy-to-use API.
 Built on top of the high-performance **bb_spi_lcd** display driver, CYMS takes advantage of **bb_spi_lcd's** optimizations, making it ideal for the **CYD**.
@@ -26,61 +19,100 @@ This library has all the features of **bb_spi_lcd** like:
 - **built-in touch** support for the CYD
 - **backbuffer (RAM) operations** for smooth UI renering
 
-# Some information
+---
 
-CYMS provides a good looking and snappy interface for various functions for the CYD.
+# 🔧 Features:
 
-Check out the Wiki for more documentation
+CYMS comes packed with features that make creating menus easy and fast.
 
-The FAQ can be accessed on the Wiki.
-
-Feel free to post any issues if any arise.
-
-# Contributing
-Contributions are welcome, not just in the form of code but also with regards to the Wiki.
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature`).
-3. Make your changes.
-4. Commit your changes (`git commit -m 'Add some feature'`).
-5. Push to the branch (`git push origin feature/your-feature`).
-6. Open a pull request.
-
-If you think something is bad about CYMS or its Wiki, feel free to send a PR, this project is Open Source after all.
-
-## Features:
-- **Supports most CYD variants** (All the 2.8" boards with resistive touch)
+- **Supports all boards that bb_spi_lcd supports**
 - **Easy to use API** for menu creation
-- **Styling widgets**
-- **Rich library of widgets** including
-   - **Buttons**
-   - **Labels**
-   - **Sliders**
-   - **Counters**
-   - **Linear graphs**
+- **Styling widgets**, a lot of ways to style your widgets
+- **Widget library**, Build interfaces using:
+  - Buttons
+  - Labels
+  - Sliders
+  - Counters
+  - Linear graphs
+    
+- **Fast UI's** leveraging bb_spi_lcd for high-speed rendering
+- **Built-in 16x16 monochrome icons** for:
+  - Back arrow
+  - Home
+  - WiFi / No WiFi
+  - Bluetooth / No Bluetooth
+  - Reboot
+    
+- **Lightweight and modular** design, allowing flexible inclusion widgets as needed
 
-- Specifically made for the CYD and CYD2USB
-- Built-in **16x16 monochrome** icons for common use cases such as:
-   - ``Back arrow``
-   - ``Home icon``
-   - ``Reboot icon``
-   - ``WiFi icon``
-   - ``No WiFi icon``
-   - ``BT icon``
-   - ``No BT icon``
+Stay tuned for future updates! 🎉
 
-# Installation
+---
 
-Simply, download the latest release, then import as zip library in Arduino IDE, no PIO support YET
+<p align="center">
+  <img src="https://via.placeholder.com/400x200?text=CYMS+Widgets+GIF" alt="CYMS Widgets GIF" width="400">
+</p>
 
-# License
+---
 
-CYMS is **Free Software** and released under the [**GNU Affero General Public License v3.0**](https://www.gnu.org/licenses/agpl-3.0.html).
+# 📥 Installation
 
-# Acknowledgements
+Currently, **CYMS** is designed for use with **Arduino IDE**. Simply follow these steps to get started:
+
+1. **Download the latest release** from the [GitHub releases page](https://github.com/Zynth9999/CYMS/releases).
+2. In Arduino IDE, go to **Sketch → Include Library → Add .ZIP Library...**.
+3. Select the downloaded `.zip` file and click **Open**.
+4. You are ready to start building menus with CYMS!
+
+> **Note:** PlatformIO support is coming soon! 🚀
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+To contribute:
+1. **Fork** the repository.
+2. Create a new branch: `git checkout -b feature/your-feature`.
+3. Make your changes and **commit**: `git commit -m 'Add feature'`.
+4. Push your changes: `git push origin feature/your-feature`.
+5. Open a **pull request**.
+
+Check out the **Wiki** for guidelines on contributing code or improving the documentation.
+
+---
+
+---
+
+# 💡 Some Information
+
+For additional documentation and FAQs, visit the **[CYMS Wiki](https://github.com/Zynth9999/CYMS/wiki)**.
+
+Feel free to submit issues if you encounter any bugs or need assistance.
+
+---
+
+# 📝 License
+
+CYMS is licensed under the [**GNU Affero General Public License v3.0**](https://www.gnu.org/licenses/agpl-3.0.html), ensuring it remains free and open for everyone to use and modify.
+
+
+---
+
+# 🙏 Acknowledgements
 
 - Thanks to Laurence Bank for his amazing [**bb_spi_lcd**](https://github.com/bitbank2/bb_spi_lcd) library on which this project is based on
 
-# Contact
-- Discord: @zynthrodak
-- E-mail: janekboxs@outlook.com + jasiek.drozdz12@gmail.com
+---
+
+# 📞 Contact
+
+For any questions, suggestions, or issues, feel free to reach out via:
+
+- **Discord**: @zynthrodak
+- **Email**: janekboxs@outlook.com, jasiek.drozdz12@gmail.com
+
+Stay connected for more updates and features! 🎉
+
+---
