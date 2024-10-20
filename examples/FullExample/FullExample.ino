@@ -38,7 +38,7 @@ void setup() {
 void loop() {
   TOUCHINFO ti;
   if (lcd.rtReadTouch(&ti)) {
-    lbl1.setText(String(bar.getValue()));
+    lbl1.setText(String(bar.getValue()).c_str());
     menu.handleTouch(ti.x[0], ti.y[0]);  // Handle touch events
   }
 }
