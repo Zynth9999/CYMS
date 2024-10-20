@@ -19,6 +19,9 @@ void Slider::draw(BB_SPI_LCD &lcd) {
   // Calculate thumb position based on current value
   int sliderPos = _x + ((_value - _minVal) * (_width - 5)) / (_maxVal - _minVal); // Adjusted to avoid exceeding bounds
 
+  // Fill the inside with the bg color
+  lcd.fillRect(_x + 1, _y, _width - 2, _height, _bgColor);
+
   // Draw slider thumb (5 pixels wide)
   lcd.fillRect(sliderPos, _y, 5, _height, _color);
 }

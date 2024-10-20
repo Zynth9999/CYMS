@@ -12,6 +12,7 @@ class Slider {
     void setValue(int value);
     int getValue();
     bool contains(int tx, int ty);
+    bool handleTouch(int tx, int ty);
 
   private:
     int _x, _y, _width, _height;

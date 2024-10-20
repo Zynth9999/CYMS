@@ -10,34 +10,42 @@ CYMS::CYMS(BB_SPI_LCD *lcd) {
   _iconCount = 0;
 }
 
-void CYMS::addWidget(void* widget) {
-  if (Button* button = dynamic_cast<Button*>(widget)) {
-    if (_buttonCount < 25) {
-      _buttons[_buttonCount++] = button;
-    }
-  } else if (Label* label = dynamic_cast<Label*>(widget)) {
-    if (_labelCount < 25) {
-      _labels[_labelCount++] = label;
-    }
-  } else if (Slider* slider = dynamic_cast<Slider*>(widget)) {
-    if (_sliderCount < 10) {
-      _sliders[_sliderCount++] = slider;
-    }
-  } else if (Counter* counter = dynamic_cast<Counter*>(widget)) {
-    if (_counterCount < 4) {
-      _counters[_counterCount++] = counter;
-    }
-  } else if (Bar* bar = dynamic_cast<Bar*>(widget)) {
-    if (_barCount < 10) {
-      _bars[_barCount++] = bar;
-    }
-  } else if (Icon* icon = dynamic_cast<Icon*>(widget)) {
-    if (_iconCount < 10) {
-      _icons[_iconCount++] = icon;
-    }
+void CYMS::addButton(Button* button) {
+  if (_buttonCount < 25) {
+    _buttons[_buttonCount++] = button;
   }
 }
 
+void CYMS::addLabel(Label* label) {
+  if (_labelCount < 25) {
+    _labels[_labelCount++] = label;
+  }
+}
+
+void CYMS::addSlider(Slider* slider) {
+  if (_sliderCount < 10) {
+    _sliders[_sliderCount++] = slider;
+  }
+}
+
+void CYMS::addCounter(Counter* counter) {
+  if (_counterCount < 4) {
+    _counters[_counterCount++] = counter;
+  }
+}
+
+
+void CYMS::addBar(Bar* bar) {
+  if (_barCount < 10) {
+    _bars[_barCount++] = bar;
+  }
+}
+
+void CYMS::addIcon(Icon* icon) {
+  if (_iconCount < 10) {
+    _icons[_iconCount++] = icon;
+  }
+}
 
 void CYMS::render() {
   // Render buttons
@@ -70,6 +78,7 @@ void CYMS::render() {
   }
 }
 
+
 void CYMS::handleTouch(int tx, int ty) {
 
   for (int i = 0; i < _buttonCount; i++) {
@@ -81,7 +90,8 @@ void CYMS::handleTouch(int tx, int ty) {
 
   for (int i = 0; i < _sliderCount; i++) {
     if (_sliders[i]->handleTouch(tx, ty)) {  // Update slider value if touched
-      _sliders[i]->draw(_lcd);  // Redraw slider with updated value
+      // Render next frame with new slider value
+      render();
       return;
     }
   }
