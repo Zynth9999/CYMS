@@ -12,7 +12,8 @@ Slider::Slider(int x, int y, int width, int height, int minVal, int maxVal, Styl
   
   _color = style._sliderColor;
   _bgColor = style._sliderBgColor;
-  _thumbShape = style._sliderThumbShape;
+  _thumbShape = style._sliderThumbShape;  // Corrected from _thumbShape to _sliderThumbShape
+
 
 }
 
@@ -27,14 +28,10 @@ void Slider::draw(BB_SPI_LCD &lcd) {
   lcd.fillRect(_x + 1, _y, _width - 2, _height, _bgColor);
 
   // Draw slider thumb (5 pixels wide)
-  if(_thumbShape == 0) {
-    lcd.fillRoundRect(sliderPos, _y + 2, 5, _height - 4, 2, _color);
-  } else if (_thumbShape == 1) {
-    lcd.fillRect(sliderPos, _y, _height, _height, _color);
-  } else {
-    lcd.fillCircle(sliderPos, _y + _height / 2, _height / 2, _color);
+  if(1==1) {
+    lcd.fillRect(sliderPos, _y, _height/5, _height,, _color);
   }
-  }
+  
   
 
 }

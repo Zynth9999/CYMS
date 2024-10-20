@@ -10,7 +10,8 @@ Button::Button(int x, int y, int w, int h, Style style, const char* label) {
 
   _color = style._buttonColor;
   _bgColor = style._buttonBgColor;
-  _radius = style._buttonRadius;
+  _radius = style._radius;  // Corrected from _buttonRadius to _radius
+
 
   _fontSize = style._buttonFontSize;
 }

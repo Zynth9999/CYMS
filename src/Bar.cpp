@@ -2,7 +2,7 @@
 #include <bb_spi_lcd.h>
 #include "Style.h"
 
-Bar::Bar(int x, int y, int width, int height, Style style, int minValue, int maxValue) {
+Bar::Bar(int x, int y, int width, int height, int minValue, int maxValue, Style style) {
   _x = x;
   _y = y;
   _width = width;

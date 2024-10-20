@@ -19,6 +19,7 @@ class Slider {
     int _minVal, _maxVal;
     int _value;
     int _color, _bgColor;
+    int _thumbShape;
     Style _style;
 };
 
