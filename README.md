@@ -57,6 +57,18 @@ Stay tuned for future updates! 🎉
   <img src="https://via.placeholder.com/400x200?text=CYMS+Widgets+GIF" alt="CYMS Widgets GIF" width="400">
 </p>
 
+<p align="center">
+  <img src="https://via.placeholder.com/400x200?text=CYMS+Widgets+GIF" alt="CYMS Widgets GIF" width="400">
+</p>
+
+<p align="center">
+  <img src="https://via.placeholder.com/400x200?text=CYMS+Widgets+GIF" alt="CYMS Widgets GIF" width="400">
+</p>
+
+<p align="center">
+  <img src="https://via.placeholder.com/400x200?text=CYMS+Widgets+GIF" alt="CYMS Widgets GIF" width="400">
+</p>
+
 ---
 
 # 📥 Installation
