@@ -25,6 +25,12 @@ This library has all the features of **bb_spi_lcd** like:
 
 ---
 
+<p align="center">
+  <img src="https://github.com/Zynth9999/CYMS/blob/main/20241020_144012.jpg?raw=true" alt="CYMS Widgets GIF" width="400">
+</p>
+
+---
+
 # 🔧 Features:
 
 CYMS comes packed with features that make creating menus easy and fast.
@@ -54,19 +60,7 @@ Stay tuned for future updates! 🎉
 ---
 
 <p align="center">
-  <img src="https://via.placeholder.com/400x200?text=CYMS+Widgets+GIF" alt="CYMS Widgets GIF" width="400">
-</p>
-
-<p align="center">
-  <img src="https://via.placeholder.com/400x200?text=CYMS+Widgets+GIF" alt="CYMS Widgets GIF" width="400">
-</p>
-
-<p align="center">
-  <img src="https://via.placeholder.com/400x200?text=CYMS+Widgets+GIF" alt="CYMS Widgets GIF" width="400">
-</p>
-
-<p align="center">
-  <img src="https://via.placeholder.com/400x200?text=CYMS+Widgets+GIF" alt="CYMS Widgets GIF" width="400">
+  <img src="https://github.com/Zynth9999/CYMS/blob/main/20241020_133250.jpg?raw=true" alt="CYMS Widgets GIF" width="400">
 </p>
 
 ---
