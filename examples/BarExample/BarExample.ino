@@ -6,6 +6,7 @@ CYMS menu(&lcd);
 // X, Y, W, H, TEXT COLOR, BTN COLOR, RADIUS, TEXT
 Button btn1(152, 50, 100, 40, TFT_GREY, TFT_GREEN,15, "+");
 Button btn2(50, 50, 100, 40, TFT_GREY, TFT_RED,15, "-");
+// X, Y, W, H, MIN, MAX, OUTLINE, FILL
 Bar bar(50,100, 200, 25, 0, 10, TFT_GREY, TFT_BLUE);
 
 void setup() {
