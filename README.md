@@ -82,6 +82,10 @@ Currently, **CYMS** is designed for use with **Arduino IDE**. Simply follow thes
 
 > **Note:** PlatformIO support is coming soon! 🚀
 
+<p align="center">
+  <img src="https://via.placeholder.com/400x200?text=Installation+gif" alt="CYMS Widgets GIF" width="400">
+</p>
+
 ---
 
 # 🤝 Contributing
