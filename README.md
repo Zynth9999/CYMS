@@ -26,7 +26,7 @@ This library has all the features of **bb_spi_lcd** like:
 ---
 
 <p align="center">
-  <img src="https://github.com/Zynth9999/CYMS/blob/main/20241020_144012.jpg?raw=true" alt="CYMS Widgets GIF" width="400">
+  <img src="https://private-user-images.githubusercontent.com/1562562/239638619-76c3d481-2523-4b6f-881c-2e29f9368cd0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjk0Mjk1NDAsIm5iZiI6MTcyOTQyOTI0MCwicGF0aCI6Ii8xNTYyNTYyLzIzOTYzODYxOS03NmMzZDQ4MS0yNTIzLTRiNmYtODgxYy0yZTI5ZjkzNjhjZDAucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MTAyMCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDEwMjBUMTMwMDQwWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ZDY2NTQ2MWRmODMzNjA5MjBiMmU0NTE4MzEzNzI5MTJkZWJlMWVmZTVjNDZhZGM2MmJhNzM3YWU2ZTZjMWQ4ZCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.h88TV0Mk_K-P-inbWKVOfc0egXX86wR1v09zWbLPjM4" alt="CYMS Widgets GIF" width="400">
 </p>
 
 ---
