@@ -14,7 +14,7 @@
 
 # 👀 Overview
 
-CYMS (Cheap Yellow Menu System) is an open-source library tailored for creating highly customizable menu systems on the **Cheap Yellow Display (CYD)**. Designed with **ease of use** and **performance** in mind, CYMS allows developers to rapidly design intuitive, responsive UIs for embedded systems using the ESP32.
+CYMS (Cheap Yellow Menu System) is an open-source library tailored for creating highly customizable menu systems for a vast amount of boards (The name is a bit misleading). Designed with **ease of use** and **performance** in mind, CYMS allows developers to rapidly design intuitive, responsive UIs for embedded systems using the ESP32.
 
 Built on top of the **bb_spi_lcd** driver, CYMS takes advantage of its low-level optimizations for fast and smooth rendering, while offering an easy-to-use API for crafting menu systems and widgets.
 
