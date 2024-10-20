@@ -10,7 +10,7 @@ void setup() {
   lcd.rtInit(32, 39, 25, 33);  // Example touch pins
   lcd.fillScreen(TFT_BLACK);
 
-  menu.addWidget(&slider);
+  menu.addSlider(&slider);
   
   menu.render();  // Render the menu
 }
