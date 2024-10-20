@@ -12,7 +12,22 @@ Label::Label(int x, int y, int fontSize, int color, int bgColor, const char* tex
 void Label::draw(BB_SPI_LCD &lcd) {
   lcd.setTextColor(_color, _bgColor);
   lcd.setCursor(_x, _y);
-  lcd.setTextSize(_fontSize);
+  if(_fontSize == 1){
+    lcd.setFont(FONT_6x8);
+  }
+  else if(_fontSize == 2){
+    lcd.setFont(FONT_8x8);
+  }
+  else if(_fontSize == 3){
+    lcd.setFont(FONT_12x16);
+  }
+  else if(_fontSize == 4){
+    lcd.setFont(FONT_16x16);
+  }
+  else if(_fontSize == 5){
+    lcd.setFont(FONT_16x32);
+  }
+  
   lcd.print(_text);
 }
 
